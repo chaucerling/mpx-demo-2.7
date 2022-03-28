@@ -1,0 +1,31 @@
+<template>
+  <list></list>
+  <view class="hint"></view>
+</template>
+
+<script>
+        import mpx, { createPage } from '@mpxjs/core'
+        import dll from '../lib/dll'
+        console.log(dll)
+
+        createPage({
+          onLoad () {
+            mpx.showModal({
+              title: '提示',
+              content: '这是一个提示',
+              showCancel: false
+            }).then(res => {
+              alert(123)
+              console.log(res)
+            })
+          }
+        })
+</script>
+
+<script type="application/json">
+  {
+    "usingComponents": {
+      "list": "../components/list"
+    }
+  }
+</script>

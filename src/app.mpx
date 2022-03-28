@@ -1,0 +1,37 @@
+<script>
+import mpx, { createApp } from '@mpxjs/core'
+import apiProxy from '@mpxjs/api-proxy'
+
+mpx.use(apiProxy, { usePromise: true })
+
+createApp({
+  onLaunch () {
+    mpx.requestPayment({
+      timeStamp: '',
+      nonceStr: '',
+      package: '',
+      signType: '',
+      paySign: ''
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+})
+</script>
+
+<style>
+  .box {
+    height: 100rpx;
+    width: 200rpx;
+  }
+  /*此处编写全局样式*/
+</style>
+
+<script name="json">
+  // 可以写注释，通过defs注入的常量做一些判断之类的操作
+  module.exports = {
+    pages: ['./pages/index']
+  }
+</script>
