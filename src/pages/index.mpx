@@ -11,11 +11,10 @@
         createPage({
           onLoad () {
             mpx.showModal({
-              title: '提示',
+              title: '提示2',
               content: '这是一个提示',
               showCancel: false
-            }).then(res => {
-              alert(123)
+            }).then(res => {alert("提示2");
               console.log(res)
             })
           }

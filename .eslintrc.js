@@ -12,7 +12,7 @@ const eslintConf = {
     sourceType: 'module',
     allowImportExportEverywhere: false
   },
-  extends: ['standard'],
+  extends: ['standard', 'eslint:recommended', 'plugin:mpx/mpx-essential'],
   settings: {
     // consider .html and .mpx files as HTML
     'html/html-extensions': ['.html', '.mpx']
